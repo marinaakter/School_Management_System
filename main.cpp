@@ -63,14 +63,16 @@ int main() {
 		if (choice == 1) {
 			string name, course;
 			int age, id;
+			cin.ignore();
 			cout << "Enter name: ";
-			cin >> name;
+			getline(cin, name);
 			cout << "Enter age: ";
 			cin >> age;
 			cout << "Enter Student ID: ";
 			cin >> id;
+			cin.ignore();
 			cout << "Course Name: ";
-			cin >> course;
+			getline(cin, course);
 			students.emplace_back(name, age, id, course);
 			cout << "Student added successfully!\n";
 		}
@@ -83,12 +85,14 @@ int main() {
 		else if (choice == 3) {
 			string name, subject;
 			int age;
+			cin.ignore();
 			cout << "Enter name: ";
-			cin >> name;
+			getline(cin, name);
 			cout << "Enter age: ";
 			cin >> age;
+			cin.ignore();
 			cout << "Subject Name ";
-			cin >> subject;
+			getline(cin, subject);
 			teachers.emplace_back(name, age, subject);
 			cout << "Teacher added successfully!\n";
 		}
