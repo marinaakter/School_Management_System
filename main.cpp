@@ -19,7 +19,7 @@ private:
 	int studentID;
 	string course_Name;
 public:
-	Student(string name, int age, int studentID, string course_name): Person(name, age) {
+	Student(string name, int age, int studentID, string course_Name): Person(name, age) {
 		this->studentID = studentID;
 		this->course_Name = course_Name;
 	}
@@ -91,7 +91,7 @@ int main() {
 			cout << "Enter age: ";
 			cin >> age;
 			cin.ignore();
-			cout << "Subject Name ";
+			cout << "Subject Name: ";
 			getline(cin, subject);
 			teachers.emplace_back(name, age, subject);
 			cout << "Teacher added successfully!\n";
